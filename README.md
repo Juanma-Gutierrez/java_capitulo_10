@@ -52,6 +52,14 @@ Adrián
 
 Realiza un programa que introduzca valores aleatorios (entre 0 y 100) en un ArrayList y que luego calcule la suma, la media, el máximo y el mínimo de esos números. El tamaño de la lista también será aleatorio y podrá oscilar entre 10 y 20 elementos ambos inclusive.
 
+```
+Ejemplo:
+Valor máximo: 96
+Valor mínimo: 3
+Suma de los valores: 792
+Media de los valores: 56,57
+```
+
 ### Ejercicio 3
 
 Escribe un programa que ordene 10 números enteros introducidos por teclado y almacenados en un objeto de la clase ArrayList.
