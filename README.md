@@ -64,6 +64,21 @@ Media de los valores: 56,57
 
 Escribe un programa que ordene 10 números enteros introducidos por teclado y almacenados en un objeto de la clase ArrayList.
 
+```
+Introduce el valor 1: 45
+Introduce el valor 2: 321
+Introduce el valor 3: 8432
+Introduce el valor 4: -1234
+Introduce el valor 5: -341
+Introduce el valor 6: 0
+Introduce el valor 7: 453
+Introduce el valor 8: 78
+Introduce el valor 9: 35
+Introduce el valor 10: 73
+Lista inicial: 45 321 8432 -1234 -341 0 453 78 35 73
+Lista ordenada: -1234 -341 0 35 45 73 78 321 453 8432
+```
+
 ### Ejercicio 4
 
 Realiza un programa equivalente al anterior pero en esta ocasión, el programa debe ordenar palabras en lugar de números.
@@ -324,11 +339,11 @@ Ejemplo 2:
 Introduzca el tipo de anfibio: gato
 Ese tipo de anfibio no existe.
 ```
+
 La información se debe guardar en dos diccionarios (dos HashMap).
 Uno de ellos tendrá parejas clave-valor del tipo (tipo de anfibio, hábitat) y otro (tipo de anfibio, alimentación). A continuación se muestra la información en una tabla:
 
 ![image](https://user-images.githubusercontent.com/101201349/209551352-a5c73ca3-eead-4a46-9c30-4f980f1aaf8f.png)
-
 
 ### Ejercicio 22
 
