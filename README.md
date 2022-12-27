@@ -38,6 +38,16 @@ Este libro está a la venta en <https://leanpub.com/aprendejava>
 
 Crea un ArrayList con los nombres de 6 compañeros de clase. A continuación, muestra esos nombres por pantalla. Utiliza para ello un bucle for que recorra todo el ArrayList sin usar ningún índice.
 
+```
+Ejemplo:
+Marina
+Antonio
+Nuria
+Marco
+Denisa
+Adrián
+```
+
 ### Ejercicio 2
 
 Realiza un programa que introduzca valores aleatorios (entre 0 y 100) en un ArrayList y que luego calcule la suma, la media, el máximo y el mínimo de esos números. El tamaño de la lista también será aleatorio y podrá oscilar entre 10 y 20 elementos ambos inclusive.
