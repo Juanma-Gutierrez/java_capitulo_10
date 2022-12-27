@@ -83,6 +83,21 @@ Lista ordenada: -1234 -341 0 35 45 73 78 321 453 8432
 
 Realiza un programa equivalente al anterior pero en esta ocasión, el programa debe ordenar palabras en lugar de números.
 
+```
+Introduce la palabra 1: perro
+Introduce la palabra 2: gato
+Introduce la palabra 3: coche
+Introduce la palabra 4: queso
+Introduce la palabra 5: disco
+Introduce la palabra 6: nariz
+Introduce la palabra 7: agua
+Introduce la palabra 8: pantalla
+Introduce la palabra 9: bellota
+Introduce la palabra 10: pila
+Lista inicial: perro gato coche queso disco nariz agua pantalla bellota pila
+Lista ordenada: agua bellota coche disco gato nariz pantalla perro pila queso
+```
+
 ### Ejercicio 5
 
 Realiza de nuevo el ejercicio de la colección de discos pero utilizando esta vez una lista para almacenar la información sobre los discos en lugar de un array convencional. Comprobarás que el código se simplifica notablemente ¿Cuánto ocupa el programa original hecho con un array? ¿Cuánto ocupa este nuevo programa hecho con una lista?
