@@ -48,9 +48,9 @@ public class Ejercicio6 {
 
         // Output data
         if (access)
-            System.out.println("Acceso concedido, bienvenido " + name);
+            System.out.println("Ha accedido al área restringida, bienvenido: " + name);
         else
-            System.out.println("Ha superado el máximo de reintentos.\nAcceso restringido");
+            System.out.println("Lo siento, no tiene acceso al área restringida");
 
         // Close scanner
         sc.close();
