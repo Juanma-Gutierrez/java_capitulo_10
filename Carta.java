@@ -7,7 +7,7 @@
  *          https://github.com/Juanma-Gutierrez
  */
 
-public class Carta {
+public class Carta implements Comparable<Carta> {
     private static String[] numberList = { "As", "Dos", "Tres", "Cuatro", "Cinco", "Seis", "Siete", "Sota", "Caballo",
             "Rey" };
     private static String[] suitList = { "bastos", "copas", "espadas", "oros" };
@@ -31,4 +31,17 @@ public class Carta {
         return this.suit;
     }
 
+    /**
+     * Ordena el ArrayList por palo y por número de forma alfabética
+     *
+     * @param card Carta con la que se compara
+     * @return posición a devolver
+     */
+    @Override
+    public int compareTo(Carta card) {
+        if (suit.equals(card.getSuit()))
+            return number.compareTo(card.getNumber());
+        else
+            return suit.compareTo(card.getSuit());
+    }
 }
