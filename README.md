@@ -132,6 +132,21 @@ Modifica el programa anterior de tal forma que las cartas se muestren ordenadas.
 
 Crea un mini-diccionario español-inglés que contenga, al menos, 20 palabras (con su correspondiente traducción). Utiliza un objeto de la clase HashMap para almacenar las parejas de palabras. El programa pedirá una palabra en español y dará la correspondiente traducción en inglés.
 
+```
+Introduzca un animal en español para traducir a inglés ('s' para salir del programa):
+delfin
+Traducción de delfin al inglés: dolphin
+Introduzca un animal en español para traducir a inglés ('s' para salir del programa):
+caballo
+Traducción de caballo al inglés: horse
+Introduzca un animal en español para traducir a inglés ('s' para salir del programa):
+perro
+Traducción de perro al inglés: dog
+Introduzca un animal en español para traducir a inglés ('s' para salir del programa):
+s
+Gracias por usar nuestro diccionario
+```
+
 ### Ejercicio 11
 
 Realiza un programa que escoja al azar 5 palabras en español del minidiccionario del ejercicio anterior. El programa irá pidiendo que el usuario teclee la traducción al inglés de cada una de las palabras y comprobará si son correctas. Al final, el programa deberá mostrar cuántas respuestas son válidas y cuántas erróneas.
