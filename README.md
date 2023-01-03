@@ -106,6 +106,15 @@ Realiza de nuevo el ejercicio de la colección de discos pero utilizando esta ve
 
 Implementa el control de acceso al área restringida de un programa. Se debe pedir un nombre de usuario y una contraseña. Si el usuario introduce los datos correctamente, el programa dirá “Ha accedido al área restringida”. El usuario tendrá un máximo de 3 oportunidades. Si se agotan las oportunidades el programa dirá “Lo siento, no tiene acceso al área restringida”. Los nombres de usuario con sus correspondientes contraseñas deben estar almacenados en una estructura de la clase HashMap.
 
+```
+Introduce nombre de usuario: pedro
+Introduce contraseña: 123456
+Error en los datos introducidos
+Introduce nombre de usuario: JuMaGu
+Introduce contraseña: 123456
+Ha accedido al área restringida, bienvenido: JuMaGu
+```
+
 ### Ejercicio 7
 
 La máquina Eurocoin genera una moneda de curso legal cada vez que se pulsa un botón siguiendo la siguiente pauta: o bien coincide el valor con la moneda anteriormente generada - 1 céntimo, 2 céntimos, 5 céntimos, 10 céntimos, 25 céntimos, 50 céntimos, 1 euro o 2 euros - o bien coincide la posición – cara o cruz. Simula, mediante un programa, la generación de 6 monedas aleatorias siguiendo la pauta correcta. Cada moneda generada debe ser una instancia de la clase Moneda y la secuencia se debe ir almacenando en una lista.
@@ -124,10 +133,37 @@ Ejemplo:
 
 Realiza un programa que escoja al azar 10 cartas de la baraja española (10 objetos de la clase Carta). Emplea un objeto de la clase ArrayList para almacenarlas y asegúrate de que no se repite ninguna.
 
+```
+Ejemplo:
+Siete de oros
+Caballo de copas
+Dos de oros
+Cinco de bastos
+Cuatro de bastos
+Cuatro de copas
+Seis de bastos
+Cuatro de espadas
+Cuatro de oros
+Tres de oros
+```
+
 ### Ejercicio 9
 
 Modifica el programa anterior de tal forma que las cartas se muestren ordenadas. Primero se ordenarán por palo: bastos, copas, espadas, oros. Cuando coincida el palo, se ordenará por número: as, 2, 3, 4, 5, 6, 7, sota, caballo, rey.
 
+```
+Ejemplo:
+As de bastos
+Siete de bastos
+Tres de bastos
+As de copas
+Cuatro de copas
+Dos de copas
+Rey de copas
+Sota de copas
+Dos de oros
+Sota de oros
+```
 ### Ejercicio 10
 
 Crea un mini-diccionario español-inglés que contenga, al menos, 20 palabras (con su correspondiente traducción). Utiliza un objeto de la clase HashMap para almacenar las parejas de palabras. El programa pedirá una palabra en español y dará la correspondiente traducción en inglés.

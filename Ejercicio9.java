@@ -19,7 +19,7 @@ public class Ejercicio9 {
     public static void main(String[] args) {
         // Var declarations
         ArrayList<Carta> cards = new ArrayList<Carta>();
-        int numCards = 40;
+        int numCards = 10;
         for (int i = 0; i < numCards; i++) {
             Carta card;
             boolean ok;
