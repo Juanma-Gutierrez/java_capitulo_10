@@ -164,6 +164,7 @@ Sota de copas
 Dos de oros
 Sota de oros
 ```
+
 ### Ejercicio 10
 
 Crea un mini-diccionario español-inglés que contenga, al menos, 20 palabras (con su correspondiente traducción). Utiliza un objeto de la clase HashMap para almacenar las parejas de palabras. El programa pedirá una palabra en español y dará la correspondiente traducción en inglés.
@@ -186,6 +187,22 @@ Gracias por usar nuestro diccionario
 ### Ejercicio 11
 
 Realiza un programa que escoja al azar 5 palabras en español del minidiccionario del ejercicio anterior. El programa irá pidiendo que el usuario teclee la traducción al inglés de cada una de las palabras y comprobará si son correctas. Al final, el programa deberá mostrar cuántas respuestas son válidas y cuántas erróneas.
+
+```
+Palabra nº 1, pez: fish
+Correcto!!
+Palabra nº 2, perro: dog
+Correcto!!
+Palabra nº 3, cabra: cow
+Incorrecto, la traducción correcta es: goat
+Palabra nº 4, delfin: dolphin
+Correcto!!
+Palabra nº 5, gato: cat
+Correcto!!
+
+Has acertado 4 palabras y has fallado 1 palabras
+Gracias por usar nuestro diccionario
+```
 
 ### Ejercicio 12
 
