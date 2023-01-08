@@ -42,8 +42,7 @@ public class Ejercicio12 {
 			System.out.println(myCard + " - " + cardPoints + " puntos");
 			points += cardPoints;
 		}
-		System.out.println("------------------------------------");
-		System.out.println("Total puntos en la jugada: " + points + " puntos.");
+		System.out.println("Tienes " + points + " puntos");
 	}
 
 	public static HashMap<String, Integer> loadData(HashMap<String, Integer> sec) {
