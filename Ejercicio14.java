@@ -26,17 +26,76 @@ import java.util.HashMap;
  */
 
 import java.util.Scanner;
-import java.util.HashMap;
 import java.util.ArrayList;
 
 public class Ejercicio14 {
-    public static void main(String[] args) {
-        // Var declarations
-        HashMap<String, Integer> product;
-        ArrayList <LineaCompra> line;
+	public static void main(String[] args) {
+		// Var declarations
+		HashMap<String, Double> products;
+		ArrayList<LineaCompra> line;
+		String item;
+		int cant;
 
-        // Var init;
-        line = new LineaCompra<String, double, int>();
+		// Scanner class
+		Scanner sc = new Scanner(System.in);
 
-    }
+		// Var init;
+		line = new ArrayList<LineaCompra>();
+		products = new HashMap<String, Double>();
+		products = loadData(products);
+		cant = 0;
+
+		System.out.println("*************************");
+		System.out.println("* T I E N D A   P E P E *");
+		System.out.println("*************************");
+		System.out.println();
+		System.out.println("Artículos disponibles:");
+		System.out.println("avena");
+		System.out.println("garbanzos");
+		System.out.println("tomate");
+		System.out.println("jengibre");
+		System.out.println("quinoa");
+		System.out.println("guisantes");
+		System.out.println();
+		do {
+			do {
+				System.out.print("Producto: ");
+				item = sc.nextLine();
+			} while (!products.containsKey(item) && !item.equals("fin"));
+			if (!item.equals("fin")){
+				System.out.print("Cantidad: ");
+				cant = sc.nextInt();
+				sc.nextLine();
+				LineaCompra aux = new LineaCompra(item, products.get(item), cant);
+				line.add(aux);
+			}
+		} while (!item.equals("fin"));
+
+		printTicket(line);
+
+		// Close scanner
+		sc.close();
+	}
+
+	public static void printTicket(ArrayList<LineaCompra> line) {
+		double total = 0;
+		System.out.printf("%-20s%10s%10s%10s\n", "Producto", "Precio", "Cantidad", "Subtotal");
+		System.out.println("---------------------------------------------------------");
+		for (LineaCompra aux : line) {
+			System.out.println(aux);
+			total += aux.getPrice() * aux.getCant();
+		}
+		System.out.println("---------------------------------------------------------");
+		System.out.println("TOTAL: " + total);
+	}
+
+	public static HashMap<String, Double> loadData(HashMap<String, Double> products) {
+		products.put("avena", 2.21);
+		products.put("garbanzos", 2.39);
+		products.put("tomate", 1.59);
+		products.put("jengibre", 3.13);
+		products.put("quinoa", 4.50);
+		products.put("guisantes", 1.60);
+		return products;
+	}
 }
