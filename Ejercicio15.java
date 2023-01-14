@@ -1,12 +1,13 @@
 import java.util.HashMap;
 
 /**
- * Ejercicio14.java
+ * Ejercicio15.java
  *
- * @version: 10/01/2023
+ * @version: 14/01/2023
  * @author: Juan Manuel Gutiérrez
  *          https://github.com/Juanma-Gutierrez
  */
+
 /**
  * Un supermercado de productos ecológicos nos ha pedido hacer un programa
  * para vender su mercancía. En esta primera versión del programa se tendrán
@@ -28,13 +29,14 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Ejercicio14 {
+public class Ejercicio15 {
 	public static void main(String[] args) {
 		// Var declarations
 		HashMap<String, Double> products;
 		ArrayList<LineaCompra> line;
 		String item;
 		int cant;
+		String dto;
 
 		// Scanner class
 		Scanner sc = new Scanner(System.in);
@@ -63,22 +65,41 @@ public class Ejercicio14 {
 				System.out.print("Producto: ");
 				item = sc.nextLine();
 			} while (!products.containsKey(item) && !item.equals("fin"));
-			if (!item.equals("fin")){
+			if (!item.equals("fin")) {
 				System.out.print("Cantidad: ");
 				cant = sc.nextInt();
 				sc.nextLine();
+
+				boolean find = false;
+				int pos = 0;
+				int i = 0;
+				for (LineaCompra lineAux : line) {
+					if (lineAux.getProduct().equals(item)) {
+						if (!find)
+							pos = i;
+						cant += lineAux.getCant();
+						find = true;
+					}
+					i++;
+				}
 				LineaCompra aux = new LineaCompra(item, products.get(item), cant);
-				line.add(aux);
+				if (find) {
+					line.set(pos, aux);
+				} else
+					line.add(aux);
 			}
 		} while (!item.equals("fin"));
+		System.out.println("Introduzca código de descuento (INTRO si no tiene ninguno):");
+		dto = sc.nextLine();
 
-		printTicket(line);
+		printTicket(line, dto);
 
 		// Close scanner
 		sc.close();
 	}
 
-	public static void printTicket(ArrayList<LineaCompra> line) {
+	public static void printTicket(ArrayList<LineaCompra> line, String dto) {
+		double dtoInPurchase = 0;
 		double total = 0;
 		System.out.printf("%-20s%10s%10s%10s\n", "Producto", "Precio", "Cantidad", "Subtotal");
 		System.out.println("---------------------------------------------------------");
@@ -86,8 +107,13 @@ public class Ejercicio14 {
 			System.out.println(aux);
 			total += aux.getPrice() * aux.getCant();
 		}
+		if (dto.equals("ECODTO")) {
+			System.out.println("---------------------------------------------------------");
+			dtoInPurchase = total * 0.1;
+			System.out.printf("Descuento: %.2f\n", dtoInPurchase);
+		}
 		System.out.println("---------------------------------------------------------");
-		System.out.println("TOTAL: " + total);
+		System.out.printf("TOTAL: %.2f\n", (total - dtoInPurchase));
 	}
 
 	public static HashMap<String, Double> loadData(HashMap<String, Double> products) {
@@ -98,5 +124,13 @@ public class Ejercicio14 {
 		products.put("quinoa", 4.50);
 		products.put("guisantes", 1.60);
 		return products;
+	}
+
+	public static ArrayList<LineaCompra> checkPurchase(ArrayList<LineaCompra> lines, HashMap<String, Double> products) {
+		// Var declarations
+		ArrayList<LineaCompra> res;
+		res = new ArrayList<LineaCompra>();
+
+		return res;
 	}
 }
