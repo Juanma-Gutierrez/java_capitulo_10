@@ -16,6 +16,9 @@
  * → 3, rey → 4;el resto de cartas no vale nada.
  */
 import java.util.HashMap;
+
+import Ejercicios8912.Carta;
+
 import java.util.ArrayList;
 
 public class Ejercicio12 {

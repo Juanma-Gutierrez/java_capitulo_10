@@ -15,6 +15,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
+import Ejercicios8912.Carta;
+
 public class Ejercicio9 {
     public static void main(String[] args) {
         // Var declarations

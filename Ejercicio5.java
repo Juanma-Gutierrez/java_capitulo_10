@@ -16,6 +16,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Ejercicio5.Disk;
+
 public class Ejercicio5 {
     public static void main(String[] args) {
         // Var declarations
