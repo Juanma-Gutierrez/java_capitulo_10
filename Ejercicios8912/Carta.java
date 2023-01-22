@@ -1,4 +1,4 @@
-package Ejercicios8y9;
+package Ejercicios8912;
 
 /**
  * Carta.java
