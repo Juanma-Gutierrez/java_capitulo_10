@@ -1,4 +1,4 @@
-package Ejercicios8912;
+package Ejercicio12;
 
 /**
  * Carta.java

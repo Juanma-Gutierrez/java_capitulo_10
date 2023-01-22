@@ -17,7 +17,7 @@
  */
 import java.util.HashMap;
 
-import Ejercicios8912.Carta;
+import Ejercicio12.Carta;
 
 import java.util.ArrayList;
 

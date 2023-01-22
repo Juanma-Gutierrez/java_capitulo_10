@@ -14,7 +14,7 @@
 
 import java.util.ArrayList;
 
-import Ejercicios8912.Carta;
+import Ejercicio8.Carta;
 
 public class Ejercicio8 {
     public static void main(String[] args) {
