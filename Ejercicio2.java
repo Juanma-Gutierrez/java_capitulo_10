@@ -31,22 +31,23 @@ public class Ejercicio2 {
         max = 0;
         min = 100;
         sum = 0;
+
+        // Process
         for (int i = 0; i < len; i++) {
             num = (int) (Math.random() * 101);
             list.add(num);
+            if (num > max)
+                max = num;
+            if (num < min)
+                min = num;
+            sum += num;
         }
-
-        // Process
-        for (int n : list) {
-            if (n > max)
-                max = n;
-            if (n < min)
-                min = n;
-            sum += n;
-        }
+        System.out.println("lista:          " + list);
+        list.sort(null);
+        System.out.println("lista ordenada: " + list);
         System.out.println("Valor máximo: " + max);
         System.out.println("Valor mínimo: " + min);
         System.out.println("Suma de los valores: " + sum);
-        System.out.println("Media de los valores: " + String.format("%.2f",  (float)sum / len));
+        System.out.println("Media de los valores: " + String.format("%.2f", (float) sum / len));
     }
 }
