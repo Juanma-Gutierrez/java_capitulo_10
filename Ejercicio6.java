@@ -25,7 +25,7 @@ public class Ejercicio6 {
         HashMap<String, String> bbdd = new HashMap<String, String>();
         String name;
         String passw;
-        int c = 3;
+        int intentos = 3;
         boolean access = false;
 
         // Var init
@@ -45,14 +45,16 @@ public class Ejercicio6 {
             name = sc.nextLine();
             System.out.print("Introduce contraseña: ");
             passw = sc.nextLine();
-            for (Map.Entry<String, String> pair : bbdd.entrySet()) {
-                if (pair.getKey().equals(name) && pair.getValue().equals(passw))
+
+            if (bbdd.containsKey(name)){
+                if (passw.equals(bbdd.get(name))){
                     access = true;
+                }
             }
-            c--;
+            intentos--;
             if (!access)
                 System.out.println("Error en los datos introducidos");
-        } while (c > 0 && !access);
+        } while (intentos > 0 && !access);
 
         // Output data
         if (access)
