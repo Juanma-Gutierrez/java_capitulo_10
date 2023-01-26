@@ -16,6 +16,7 @@
  * la clase Moneda y la secuencia se debe ir almacenando en una lista.
  */
 import java.util.ArrayList;
+import Ejercicio7.Moneda;
 
 public class Ejercicio7 {
     public static void main(String[] args) {

@@ -27,6 +27,7 @@ import java.util.HashMap;
  */
 
 import java.util.Scanner;
+import Ejercicio14.LineaCompra;
 import java.util.ArrayList;
 
 public class Ejercicio15 {

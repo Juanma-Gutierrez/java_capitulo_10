@@ -1,3 +1,4 @@
+package Ejercicio7;
 /**
  * Moneda.java
  *
