@@ -29,8 +29,8 @@ public class Ejercicio6 {
         boolean access = false;
 
         // Var init
-        bbdd.put("JuMaGu", "123456");
-        bbdd.put("MaRuAr", "111222");
+        bbdd.put("JuaGut", "123456");
+        bbdd.put("MarRui", "111222");
         bbdd.put("MarVal", "111111");
         bbdd.put("NurRue", "000000");
         bbdd.put("AleGir", "999999");
