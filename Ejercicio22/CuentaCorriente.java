@@ -14,11 +14,8 @@ public class CuentaCorriente {
 	private float saldo;
 	private ArrayList<Apunte> apuntes = new ArrayList<Apunte>();
 
-	private String generaCuenta() {
-		String numCuenta = "";
-		for (int i = 0; i < 10; i++)
-			numCuenta += (int) (Math.random() * 10);
-		return numCuenta;
+	public CuentaCorriente() {
+		this(0);
 	}
 
 	public CuentaCorriente(int saldo) {
@@ -26,8 +23,12 @@ public class CuentaCorriente {
 		this.saldo = saldo;
 	}
 
-	public CuentaCorriente() {
-		this(0);
+	private String generaCuenta() {
+		String numCuenta = "";
+		numCuenta += (int) (Math.random() * 9) + 1; // El primer número no puede ser 0
+		for (int i = 0; i < 9; i++) // Metemos los otros 9 dígitos de la cuenta
+			numCuenta += (int) (Math.random() * 10);
+		return numCuenta;
 	}
 
 	public String getCuentaCorriente() {
@@ -114,12 +115,19 @@ public class CuentaCorriente {
 	 * @throws ApunteException
 	 */
 	public void transferencia(CuentaCorriente cuenta, float cantidad) throws ApunteException {
-		cuenta.ingresoTransferencia(cantidad, this.getCuentaCorriente());
-		this.saldo -= cantidad;
-		Apunte nuevoApunte = new Apunte("Transf. emitida", cantidad, this.saldo, cuenta.getCuentaCorriente());
-		this.apuntes.add(nuevoApunte);
+		if (cantidad > this.saldo) {
+			throw new ApunteException();
+		} else {
+			cuenta.ingresoTransferencia(cantidad, this.getCuentaCorriente());
+			this.saldo -= cantidad;
+			Apunte nuevoApunte = new Apunte("Transf. emitida", cantidad, this.saldo, cuenta.getCuentaCorriente());
+			this.apuntes.add(nuevoApunte);
+		}
 	}
 
+	/**
+	 * Imprime los movimientos de la cuenta
+	 */
 	public void movimientos() {
 		System.out.println("Movimientos de la cuenta " + this.getCuentaCorriente());
 		System.out.println("-----------------------------------");

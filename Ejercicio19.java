@@ -65,7 +65,7 @@ public class Ejercicio19 {
 		sc.close();
 	}
 
-	public static HashMap<String, String> insertaDatos() {
+	private static HashMap<String, String> insertaDatos() {
 		HashMap<String, String> dicc = new HashMap<String, String>();
 		dicc.put("caliente", "hot");
 		dicc.put("rojo", "red");
@@ -76,6 +76,5 @@ public class Ejercicio19 {
 		dicc.put("hierro", "iron");
 		dicc.put("grande", "big");
 		return dicc;
-
 	}
 }
